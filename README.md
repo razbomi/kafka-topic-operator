@@ -1,8 +1,12 @@
 # kafka-topic-operator
-Kafka configs controller in go
+Manage kafka topics and connector configuration along with your deployments.
 
 # Developing
 
-Update dependencies `go mod tidy`
+Run `kind create cluster --name local`
+Run `kubectl cluster-info --context kind-local`
+Run `make run`
 
-Find the kube [types](https://github.com/kubernetes/client-go/tree/master/kubernetes/typed)
+Using the [controller-runtime](https://github.com/kubernetes-sigs/controller-runtime)
+Framework [kubebuilder](https://book.kubebuilder.io/quick-start.html)
+Runtime [kind](https://github.com/kubernetes-sigs/kind)
